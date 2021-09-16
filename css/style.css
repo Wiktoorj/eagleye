@@ -1,0 +1,2611 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both; 
+}
+
+.upp {
+    max-width: 10vw;
+    position: fixed;
+    bottom: 4vw;
+    right: 8vw;
+    opacity: .5;
+    padding: 1vw;
+    transition: .5s;
+}
+
+.upp:hover {
+    bottom: 5vw;
+}
+
+/*header*/
+header {
+
+    height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+    position: relative;
+    background-image: url(../img/bck.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+}
+
+header p,
+h1,
+.dlej,
+.logo,
+.dron {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+}
+
+header p {
+    top: 20%;
+    padding: 10px;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, .7);
+    border: 1px solid black;
+}
+
+header h1 {
+    top: 0;
+    bottom: 0;
+    line-height: 100vh;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+header .dlej {
+    display: block;
+    top: 70vh;
+    margin: 0 auto;
+}
+
+header a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+header .logo {
+    top: 85vh;
+    margin: 0 auto;
+}
+
+header .dron {
+    display: none;
+    max-height: 20vw;
+    left: 60vw;
+    top: 100vh;
+    transition: .7s;
+
+}
+
+@media (min-width: 411px) and (orientation: portrait) {
+    header p {
+        font-size: 40px;
+    }
+
+    header h1 {
+        font-size: 60px;
+    }
+
+    header a {
+        padding: 15px 30px;
+    }
+}
+
+/*iphone X*/
+@media (min-height: 800px) and (min-width: 350px) {
+
+    header p {
+        font-size: 40px;
+    }
+
+    header h1 {
+        font-size: 60px;
+    }
+
+    header a {
+        padding: 15px 30px;
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    header p {
+        font-size: 75px;
+    }
+
+    header h1 {
+        font-size: 120px;
+    }
+
+    header a {
+        font-size: 38px;
+        padding: 20px 48px;
+    }
+
+    header .logo {
+        width: 10%;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    header p {
+        margin-top: 20vh;
+    }
+}
+
+@media (orientation: landscape) {
+
+    header p {
+        top: 15vh;
+        font-size: 25px;
+    }
+
+    header h1 {
+        top: -15px;
+        font-size: 70px;
+    }
+
+    header button {
+        top: 65vh
+    }
+
+    header a {
+        font-size: 15px;
+    }
+
+    header .logo {
+        top: 80vh;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    header p {
+        top: 15vh;
+    }
+
+    header h1 {
+        font-size: 80px;
+    }
+
+    header a {
+        font-size: 20px;
+    }
+
+    header .logo {
+        top: 82vh;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 823px) {
+    header p {
+        font-size: 30px;
+    }
+
+    header h1 {
+        top: -25px;
+        font-size: 90px;
+    }
+
+    header button {
+        top: 65vh
+    }
+
+    header a {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .upp {
+        width: 10vh;
+    }
+
+    header p {
+        top: 88px;
+        font-size: 55px;
+        text-align: left;
+        padding-left: 15vw;
+    }
+
+    header h1 {
+        font-size: 125px;
+    }
+
+    header button {
+        top: 70vh;
+    }
+
+    header a {
+        font-size: 35px;
+        padding: 15px 40px;
+    }
+
+    header .logo {
+        top: 85vh;
+    }
+
+    header .dron {
+        display: block;
+    }
+
+    header a:hover {
+        background-color: rgba(255, 255, 255, .1);
+        color: black;
+        box-shadow: 0px 0px 0px 6px black;
+    }
+
+    header .dlej:hover + img {
+        top: 10vh;
+    }
+}
+
+@media (min-width: 1280px) {
+    header p {
+        top: 15vh;
+        font-size: 55px;
+    }
+
+    header h1 {
+        font-size: 160px;
+    }
+
+    header a {
+        padding: 15px 60px;
+    }
+
+}
+
+@media (min-width: 1680px) {
+
+    header h1 {
+        font-size: 190px;
+    }
+
+    header a {
+        font-size: 45px;
+    }
+}
+
+/*navigacja*/
+nav {
+    min-height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+nav p {
+    padding: 10vh 5vh 4vh;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: overline;
+    letter-spacing: 2px;
+
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    width: 75%;
+    padding: 4vw 4vw;
+    margin: 5vh auto;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.smigla {
+    max-width: 100%;
+    padding-bottom: 3vh;
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+    nav p {
+        padding-top: 7vh;
+        font-size: 25px;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+
+}
+
+@media (min-width: 411px) and (orientation: portrait) {
+    nav p {
+
+        font-size: 28px;
+    }
+
+    nav a {
+        font-size: 21px;
+    }
+
+}
+
+@media (min-height: 800px) and (orientation: portrait) {
+    nav a {
+        font-size: 19px;
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    nav p {
+        font-size: 45px;
+    }
+
+    nav a {
+        margin: 3vh auto;
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    nav p {
+        font-size: 62px;
+    }
+
+    nav a {
+
+        font-size: 42px;
+    }
+}
+
+@media (orientation: landscape) {
+    nav p {
+        font-size: 32px;
+    }
+
+    nav a {
+        font-size: 22px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 812px) {
+    nav img {
+        margin-bottom: 3vh;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav p {
+        padding: 6vh 6vh 4vh;
+        font-size: 62px;
+    }
+
+    nav a {
+        margin: 2vh auto;
+        padding: 2vw;
+        font-size: 24px;
+        letter-spacing: 1vw;
+    }
+
+    .smigla {
+        padding-bottom: 0;
+    }
+
+    nav a:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 0px 0px 0px 6px white;
+        letter-spacing: 2vw;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    nav p {
+        padding: 8vh 6vh 4vh;
+        font-size: 62px;
+    }
+
+    nav a {
+        padding: 2vw;
+        font-size: 30px;
+    }
+
+    .smigla {
+        padding-bottom: 5vh;
+    }
+}
+
+@media (min-width: 1680px) {
+    nav a {
+        font-size: 38px;
+        padding: 1vw;
+    }
+}
+
+/*sekcja(1): o nas*/
+#about {
+    max-width: 1680px;
+    padding-bottom: 3vh;
+    margin: 0 auto;
+    line-height: 28px;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+    word-wrap: break-word;
+
+}
+
+.motto {
+    padding: 0 4vh;
+}
+
+.motto h4 {
+    padding: 10vh 0vh 4vh;
+    font-size: 24px;
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+
+.motto h2,
+h1,
+p {
+    font-size: 18px;
+}
+
+.motto h2,
+h1 {
+    padding-bottom: 3vh;
+}
+
+.motto h1,
+.motto p {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.motto h1 {
+    text-align: center;
+}
+
+.motto p {
+    text-align: right;
+    padding: 5vh 0 6vh;
+}
+
+.abouti h3,
+.pmotto {
+    padding: 0 4vh;
+}
+
+.abouti h3 {
+    padding-bottom: 3vh;
+    font-size: 20px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.abouti span {
+    font-weight: 700;
+}
+
+.abouti img {
+    width: 100%;
+    padding-bottom: 2vh;
+}
+
+.meet,
+.licence,
+.ideas {
+    margin-bottom: 5vh;
+    border-bottom: 2px dashed black;
+}
+
+.pmotto {
+    text-align: left;
+    font-size: 17px;
+    padding-bottom: 4vh;
+}
+
+.licence span {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+    .abouti h4 {
+        font-size: 30px;
+        padding-bottom: 9vh;
+    }
+
+    .motto {
+        padding-bottom: 5vh;
+    }
+
+    .motto h2 {
+        font-size: 25px;
+    }
+
+    .abouti h3 {
+        font-size: 25px;
+    }
+
+    .abouti p {
+        font-size: 20px;
+        line-height: 34px;
+    }
+}
+
+@media (min-width: 414px) and (orientation: portrait) {
+    .abouti h4 {
+        font-size: 35px;
+    }
+
+
+    .motto h2 {
+        font-size: 30px;
+    }
+
+    .abouti h3 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .abouti p {
+        font-size: 22px;
+    }
+}
+
+/*iphone X*/
+@media (min-height: 800px) and (orientation: portrait) {
+    .abouti h4 {
+        font-size: 30px;
+    }
+
+    .motto h2 {
+        padding: 7vh auto;
+        font-size: 25px;
+    }
+
+    .motto h1,
+    p {
+        font-size: 21px;
+    }
+
+
+    .abouti h3 {
+        font-size: 28px;
+        line-height: 35px;
+
+    }
+
+    .abouti p {
+        font-size: 22px;
+        line-height: 38px;
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    .abouti h4 {
+        font-size: 45px;
+    }
+
+    .motto h2 {
+        font-size: 36px;
+    }
+
+    .motto h1,
+    p {
+        font-size: 32px;
+    }
+
+
+    .abouti h3 {
+        font-size: 36px;
+
+    }
+
+    .abouti p {
+        font-size: 32px;
+        line-height: 45px;
+    }
+}
+
+@media (orientation: landscape) {
+
+    .motto h2,
+    .motto h1,
+    .motto p {
+        font-size: 20px;
+
+    }
+
+    .motto h1 {
+        margin: 3vh auto;
+    }
+
+    .motto p {
+        text-align: right;
+        padding: 16vh 0 16vh;
+    }
+
+    .abouti .pmotto {
+        font-size: 16px;
+
+    }
+
+    .abouti h3 {
+        letter-spacing: 3px;
+        word-spacing: 5px;
+    }
+
+    .abouti img {
+        max-width: 50%;
+    }
+
+    .meet img,
+    .other img {
+        margin-top: 13vh;
+    }
+
+    .meet img,
+    .ideas img {
+        float: right;
+        margin-left: 2vh;
+    }
+
+    .licence img,
+    .rower {
+        float: left;
+        margin-right: 2vh;
+    }
+
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+
+    .abouti h4 {
+        font-size: 30px;
+    }
+
+    .motto h2 {
+        margin-top: 5vh;
+        font-size: 23px;
+    }
+
+    .motto h1,
+    .motto p {
+        font-size: 22px;
+    }
+
+    .abouti .pmotto {
+        font-size: 18px;
+    }
+
+    .abouti h3 {
+        font-size: 23px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 731px) {
+    .abouti .pmotto {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    .abouti h3 {
+        font-size: 26px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 812px) {
+    .abouti h4 {
+        font-size: 32px;
+    }
+
+    .motto h2,
+    .motto h1,
+    .motto p {
+        font-size: 26px;
+    }
+
+    .abouti h3 {
+        font-size: 26px;
+    }
+
+    .abouti .pmotto {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .abouti h4 {
+        font-size: 42px;
+    }
+
+    .motto h2,
+    .motto h1,
+    .motto p {
+        font-size: 35px;
+    }
+
+    .abouti h3 {
+        font-size: 35px;
+        letter-spacing: 6px;
+    }
+
+    .abouti .pmotto {
+        font-size: 28px;
+        letter-spacing: 5px;
+        line-height: 36px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .abouti h4 {
+        font-size: 62px;
+    }
+
+    .motto h2,
+    .motto h1,
+    .motto p {
+        font-size: 42px;
+    }
+
+    .motto p {
+        padding-top: 10vh;
+    }
+
+    .abouti h3 {
+        font-size: 42px;
+        letter-spacing: 9px;
+    }
+
+    .abouti .pmotto {
+        font-size: 35px;
+        letter-spacing: 7px;
+        line-height: 42px;
+    }
+}
+
+@media (min-width: 1680px) {
+    .abouti h4 {
+        font-size: 72px;
+    }
+
+    .motto h2,
+    .motto h1,
+    .motto p {
+        font-size: 52px;
+    }
+
+    .motto p {
+        padding-top: 12vh;
+    }
+
+    .abouti h3 {
+        font-size: 52px;
+        letter-spacing: 13px;
+    }
+
+    .abouti .pmotto {
+        font-size: 42px;
+        letter-spacing: 7px;
+        line-height: 62px;
+    }
+}
+
+/*TODO*/
+section {
+    min-height: 100vh;
+}
+
+/*phantome zdjecie w tle pomiedzy sekcjami*/
+.pph {
+    height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+    background-image: url(../img/phantome/white.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*sekcja(2): phantome*/
+.phantomee {
+    min-height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding-bottom: 3vh;
+    margin: 0 auto;
+    line-height: 28px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.phantomee h1 {
+    padding: 10vh 4vh 8vh;
+    font-size: 21px;
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+
+.phantomee iframe {
+    padding: 29vh 0 4vh;
+    min-height: 315px;
+    width: 100%;
+    display: block;
+}
+
+.opisp {
+    padding: 0 4vw 4vh;
+    text-align: center;
+    font-size: 17px;
+}
+
+.spec {
+    padding: 0 4vw;
+
+}
+
+.tit {
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    padding-bottom: 5vh;
+}
+
+.left {
+    float: left;
+    max-width: 50%;
+    font-weight: 600;
+    display: block;
+}
+
+.tab {
+    border-bottom: 2px dotted rgba(0, 0, 0, .2);
+}
+
+.neh {
+    border: none;
+}
+
+.right {
+    float: right;
+    max-width: 50%;
+    text-align: right;
+}
+
+.phantomee img {
+    display: block;
+    margin: 0 auto;
+    padding: 4vh 0 0;
+    max-width: 66.6666vw;
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+    .phantomee h1 {
+        font-size: 24px;
+    }
+
+    .opisp {
+        font-size: 21px;
+    }
+
+    .tit {
+        font-size: 24px;
+
+    }
+
+    .left,
+    .right {
+        font-size: 20px;
+    }
+
+    .tab {
+        padding: 1vh 0;
+    }
+}
+
+@media (min-width: 411px) and (orientation: portrait) {
+    .phantomee h1 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .tit {
+        font-size: 26px;
+    }
+
+    .left,
+    .right {
+        font-size: 22px;
+    }
+}
+
+/*iphone X*/
+@media (min-height: 800px) and (orientation: portrait) {
+    .phantomee h1 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .opisp {
+        font-size: 24px;
+    }
+
+    .tit {
+        font-size: 28px;
+    }
+
+    .left,
+    .right {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    .phantomee h1 {
+        font-size: 42px;
+    }
+
+    .phantomee iframe {
+        width: 60%;
+        padding-top: 19vh;
+        margin: 0 auto;
+    }
+
+    .opisp {
+        font-size: 32px;
+        line-height: 43px
+    }
+
+    .tit {
+        font-size: 40px;
+
+    }
+
+    .left,
+    .right {
+        font-size: 28px;
+    }
+
+    .phantomee img {
+        max-width: 30%;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    .phantomee h1 {
+        font-size: 56px;
+    }
+
+    .phantomee iframe {
+        width: 80%;
+    }
+
+    .opisp {
+        font-size: 42px;
+        line-height: 53px
+    }
+
+    .tit {
+        font-size: 54px;
+
+    }
+
+    .left,
+    .right {
+        font-size: 36px;
+        line-height: 53px
+    }
+}
+
+@media (orientation: landscape) {
+    .phantomee h1 {
+        font-size: 24px;
+    }
+
+    .phantomee img {
+        width: 30%;
+        padding: 4vh 0;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .phantomee h1 {
+        font-size: 28px;
+    }
+
+    .opisp {
+        font-size: 20px;
+    }
+
+    .tit {
+        font-size: 24px;
+
+    }
+
+    .left,
+    .right {
+        font-size: 20px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 812px) {
+    .phantomee h1 {
+        font-size: 32px;
+    }
+
+    .opisp {
+        font-size: 25px;
+        line-height: 36px;
+    }
+
+    .tit {
+        font-size: 28px;
+
+    }
+
+    .left,
+    .right {
+        font-size: 24px;
+    }
+
+    .tab {
+        padding: 2vh 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .phantomee h1 {
+        font-size: 52px;
+    }
+
+    .opisp {
+        font-size: 34px;
+        letter-spacing: 2px;
+    }
+
+    .tit {
+        padding-top: 4vh;
+        font-size: 48px;
+    }
+
+    .left,
+    .right {
+        font-size: 34px;
+        line-height: 42px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .phantomee h1 {
+        font-size: 58px;
+    }
+
+    .left,
+    .right {
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 1680px) {
+    .phantomee h1 {
+        font-size: 72px;
+    }
+
+    .opisp {
+        font-size: 46px;
+        line-height: 56px;
+        letter-spacing: 3px;
+    }
+
+    .tit {
+        font-size: 70px;
+    }
+
+    .left,
+    .right {
+        font-size: 46px;
+        line-height: 58px;
+    }
+}
+
+/*FPV zdjecie w tle pomiedzy sekcjami*/
+.pphh {
+    height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+    background-image: url(../img/f5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*sekcja(3): fpv*/
+.fpvv {
+    min-height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding-bottom: 3vh;
+    line-height: 28px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.fpvv h1 {
+    padding: 10vh 4vh 8vh;
+    font-size: 16px;
+    word-spacing: 2vw;
+    text-transform: uppercase;
+}
+
+.fpvv h1 span {
+    text-decoration: overline;
+    font-size: 32px;
+}
+
+.fpvv span {
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 22px;
+}
+
+img.fp1,
+img.fp2,
+img.fp3 {
+    max-width: 100vw;
+    display: block;
+    padding: 2vh 0;
+}
+
+img.fp1 {
+    padding-top: 25vh;
+}
+
+img.fp2 {
+    float: right;
+    max-width: 50%;
+}
+
+.fpvv p {
+    font-size: 17px;
+    word-wrap: break-word;
+    margin: 0 4vw;
+}
+
+.fpvv iframe {
+    min-height: 315px;
+    width: 100%
+}
+
+.fpvv h3 {
+    padding: 4vh 4vw;
+    font-size: 21px;
+    word-spacing: 1vw;
+    text-transform: uppercase;
+}
+
+.ph3 {
+    padding-bottom: 4vh;
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+
+
+    .fpvv span {
+        font-size: 21px;
+    }
+
+
+    .fpvv p {
+        font-size: 20px;
+
+    }
+}
+
+@media (min-width: 411px) and (orientation: portrait) {
+    .fpvv h1 {
+        font-size: 22px;
+
+    }
+
+    .fpvv h1 span {
+        font-size: 38px;
+    }
+
+    .fpvv span {
+        font-size: 26px;
+    }
+
+
+    img.fp2 {
+        margin-left: 2vw;
+    }
+
+    .fpvv p {
+        font-size: 25px;
+        line-height: 31px;
+        ;
+    }
+
+    .fpvv h3 {
+        font-size: 26px;
+    }
+}
+
+/*iphone X*/
+@media (min-height: 800px) and (orientation: portrait) {
+    .fpvv h1 {
+        font-size: 20px;
+
+    }
+
+    .fpvv h1 span {
+        font-size: 40px;
+    }
+
+    .fpvv span {
+        font-size: 28px;
+    }
+
+    img.fp1 {
+        padding-top: 20vh;
+    }
+
+    img.fp2 {
+        margin-left: 2vw;
+    }
+
+    .fpvv p {
+        font-size: 21px;
+        line-height: 36px;
+    }
+
+    .fpvv h3 {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    .fpvv h1 {
+        font-size: 28px;
+
+    }
+
+    .fpvv h1 span {
+        font-size: 55px;
+    }
+
+    .fpvv span {
+        font-size: 40px;
+    }
+
+
+    .fpvv p {
+        font-size: 34px;
+        line-height: 46px;
+    }
+
+    .fpvv h3 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    .fpvv h1 {
+        font-size: 36px;
+
+    }
+
+    .fpvv h1 span {
+        font-size: 65px;
+    }
+
+    .fpvv span {
+        font-size: 45px;
+        line-height: 82px;
+    }
+
+
+    .fpvv p {
+        font-size: 36px;
+        line-height: 63px;
+    }
+
+    .fpvv h3 {
+        font-size: 42px;
+    }
+}
+
+@media (orientation: landscape) {
+    img.fp1 {
+        padding: 36vh 0 12vh;
+        ;
+    }
+
+    img.fp2 {
+        padding-left: 4vw;
+    }
+
+    .fpvv h3 {
+        font-size: 24px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .fpvv p {
+        font-size: 21px;
+        line-height: 35px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 812px) {
+    .fpvv h1 {
+        font-size: 22px;
+
+    }
+
+    .fpvv h1 span {
+        font-size: 42px;
+    }
+
+    .fpvv span {
+        font-size: 35px;
+    }
+
+    .fpvv p {
+        font-size: 26px;
+        line-height: 39px;
+        letter-spacing: 2px;
+    }
+
+    .fpvv h3 {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .fpvv h1 {
+        font-size: 36px;
+
+    }
+
+    .fpvv h1 span {
+        font-size: 62px;
+    }
+
+
+    .fpvv p {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .fpvv h3 {
+        font-size: 36px;
+        margin: 4vh 0;
+    }
+
+    .ph3 {
+        padding-bottom: 8vh;
+    }
+}
+
+@media (min-width: 1280px) {
+    .fpvv h1 {
+        font-size: 38px;
+
+    }
+
+    .fpvv h1 span {
+        font-size: 66px;
+    }
+
+    .fpvv span {
+        font-size: 46px;
+    }
+
+    .fpvv p {
+        font-size: 42px;
+        line-height: 52px;
+    }
+
+    .fpvv h3 {
+        font-size: 52px;
+    }
+}
+
+@media (min-width: 1680px) {
+    .fpvv h1 {
+        font-size: 46px;
+
+    }
+
+    .fpvv h1 span {
+        font-size: 80px;
+    }
+
+    .fpvv span {
+        font-size: 56px;
+    }
+
+    .fpvv p {
+        font-size: 56px;
+        line-height: 72px;
+    }
+
+    .fpvv h3 {
+        font-size: 62px;
+    }
+}
+
+/*FPV zdjecie w tle pomiedzy sekcjami*/
+.pphh1 {
+    height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+    background-image: url(../img/fp1.jpeg);
+    background-repeat: no-repeat;
+    background-position: 5%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*sekcja(4): oferta*/
+section.ofer {
+    max-width: 1680px;
+    padding-bottom: 3vh;
+    margin: 0 auto;
+    line-height: 28px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.ofer h3 {
+    padding: 10vh 4vh 4vh;
+    font-size: 24px;
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+
+.range,
+.indcl {
+    padding-bottom: 4vh;
+    border-bottom: 1px dashed rgba(0, 0, 0, .6);
+}
+
+.range img {
+    margin: 0 auto 4vh;
+    display: block;
+    max-width: 50vw;
+}
+
+.range h2,
+.range h4,
+.range p,
+.gwprof h2,
+.gwprof p {
+    padding: 2vh 4vw;
+}
+
+.range h2 {
+    line-height: 36px;
+    text-align: center;
+}
+
+.range a,
+.gwprof a {
+
+    display: block;
+    margin: 3vh 10vw;
+    padding: 1vw 4vw;
+    border: 1px dotted rgba(0, 0, 0, .5);
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, .1)
+}
+
+.indcl img {
+    margin: 3vh auto 0;
+    display: block;
+    max-width: 100vw;
+}
+
+.indcl h2 {
+    padding: 0 4vw;
+}
+
+.indcl p {
+    padding: 4vh 4vw;
+}
+
+.indcl h2,
+.indcl p,
+.gwprof h2,
+.gwprof p {
+    text-align: center;
+}
+
+.gwprof {
+    padding-bottom: 4vh;
+}
+
+.gwprof img {
+    margin: 3vh auto;
+    display: block;
+    min-width: 40vw;
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+    .ofer h3 {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 411px) and (orientation: portrait) {
+    .ofer h3 {
+        font-size: 32px;
+    }
+
+    .ofer h2 {
+        font-size: 26px;
+
+    }
+
+    .range h4 {
+        font-size: 22px;
+    }
+
+    .ofer p {
+        font-size: 21px;
+    }
+
+    .range a,
+    .gwprof a {
+        font-size: 19px;
+
+    }
+}
+
+/*iphone X*/
+@media (min-height: 800px) and (orientation: portrait) {
+    .ofer h3 {
+        font-size: 32px;
+    }
+
+    .ofer h2 {
+        font-size: 26px;
+
+    }
+
+    .range img {
+        margin-bottom: 2vh;
+    }
+
+    .range h4 {
+        font-size: 22px;
+    }
+
+    .ofer p {
+        font-size: 21px;
+    }
+
+    .range a,
+    .gwprof a {
+        font-size: 19px;
+
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    .ofer h3 {
+        font-size: 52px;
+    }
+
+    .ofer h2 {
+        font-size: 34px;
+        line-height: 45px;
+    }
+
+    .range h4 {
+        font-size: 26px;
+    }
+
+    .ofer p {
+        font-size: 26px;
+        line-height: 45px;
+    }
+
+    .range a,
+    .gwprof a {
+        font-size: 25px;
+        line-height: 32px;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    .ofer h2 {
+        font-size: 40px;
+    }
+
+    .range h4 {
+        font-size: 29px;
+    }
+
+    .ofer p {
+        font-size: 32px;
+    }
+
+    .range a,
+    .gwprof a {
+        font-size: 29px;
+    }
+}
+
+@media (orientation: landscape) {
+    .range img {
+        max-height: 40vw;
+    }
+
+    .gwprof img {
+        min-width: 30vw;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .ofer p {
+        letter-spacing: 2px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 812px) {
+    .ofer h3 {
+        font-size: 36px;
+    }
+
+    .range img {
+        max-height: 30vw;
+    }
+
+    .ofer h2 {
+        font-size: 32px;
+        line-height: 42px;
+        padding-bottom: 6vh;
+    }
+
+    .range h4 {
+        font-size: 24px;
+    }
+
+    .ofer p {
+        font-size: 24px;
+        line-height: 36px;
+        padding-bottom: 6vh;
+    }
+
+    .range a,
+    .gwprof a {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .range a:hover {
+        letter-spacing: 2vw;
+    }
+
+    .gwprof a:hover {
+        letter-spacing: 5px;
+    }
+
+    .ofer h3 {
+        font-size: 52px;
+    }
+
+    .ofer h2 {
+        font-size: 38px;
+    }
+
+    .gwprof img {
+        min-width: 20vw;
+    }
+}
+
+@media (min-width: 1280px) {
+    .ofer h3 {
+        font-size: 62px;
+    }
+
+    .ofer h2 {
+        font-size: 48px;
+    }
+
+    .range h4 {
+        font-size: 32px;
+    }
+
+    .ofer p {
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    .range a,
+    .gwprof a {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1680px) {
+    .ofer h3 {
+        font-size: 72px;
+    }
+
+    .ofer h2 {
+        font-size: 59px;
+    }
+
+    .range h4 {
+        font-size: 42px;
+    }
+
+    .ofer p {
+        font-size: 42px;
+        line-height: 56px;
+    }
+
+    .range a,
+    .gwprof a {
+        font-size: 36px;
+    }
+}
+
+/*Oferta zdjecie w tle pomiedzy sekcjami*/
+.pphh2 {
+    height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+    background-image: url(../img/ujecia/kg.jpg);
+    background-repeat: no-repeat;
+    background-position: 5%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* sekcja(5): opinions */
+.opins {
+    min-height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding-bottom: 3vh;
+    line-height: 28px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.opins h3 {
+    padding: 10vh 4vh 4vh;
+    font-size: 24px;
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+
+.opins h4 {
+    padding: 0 4vh 4vh;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+form {
+    padding: 4vw 0;
+    border-top: 1px dashed rgba(0, 0, 0, .6);
+    border-bottom: 1px dashed rgba(0, 0, 0, .6);
+}
+
+input[type=text],
+input[type=submit],
+select,
+textarea,
+input[type=email],
+input[type=tel],
+input[type=datetime-local] {
+    margin: 0 8vw 3vh;
+}
+
+textarea {
+    width: 79vw;
+    height: 15vh;
+}
+
+input[type=text],
+select,
+input[type=email],
+input[type=tel],
+input[type=datetime-local] {
+    height: 5vh;
+    width: 79vw;
+}
+
+input[type=submit],
+input[type=reset] {
+    width: 30vw;
+    padding: 1vh 3vw;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+}
+
+textarea,
+input[type=text],
+select,
+input[type=submit],
+input[type=reset],
+input[type=email],
+input[type=tel],
+input[type=datetime-local] {
+    border: 1px solid black;
+}
+
+.scisk {
+    max-width: 100vw;
+    border-bottom: 1px dashed rgba(0, 0, 0, .6);
+}
+
+div.profile {
+    border-bottom: 1px dashed rgba(0, 0, 0, .6);
+}
+
+div.profile1,
+div.profile {
+    width: 100vw;
+    padding: 4vw;
+}
+
+
+.avatar {
+    border: 1px solid rgba(0, 0, 0, .2);
+    padding: 2vw;
+    opacity: .8;
+    margin: 1vh 2vh 0 0;
+    width: 30vw;
+    float: left;
+}
+
+
+.answer p {
+    display: block;
+    font-size: 14px;
+}
+
+.answer span {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+@media (min-width: 360px) and (orientation: portrait) {
+    .opins h3 {
+        font-size: 26px;
+    }
+
+    .opins h4 {
+        font-size: 17px;
+    }
+
+    form {
+        padding-top: 9vw;
+    }
+
+    textarea {
+        height: 17vh;
+    }
+
+    input[type=text],
+    select {
+        height: 5vh;
+    }
+
+    textarea,
+    input[type=text],
+    select,
+    input[type=submit],
+    input[type=reset],
+    input[type=email],
+    input[type=tel],
+    input[type=datetime-local] {
+        font-size: 15px;
+    }
+
+    .answer p,
+    .answer span {
+        font-size: 17px;
+        line-height: 32px;
+    }
+}
+
+@media (min-width: 411px) and (orientation: portrait) {
+    .opins h3 {
+        font-size: 31px;
+    }
+
+    .opins h4 {
+        font-size: 19px;
+    }
+
+    textarea,
+    input[type=text],
+    select,
+    input[type=submit],
+    input[type=reset],
+    input[type=email],
+    input[type=tel],
+    input[type=datetime-local] {
+        font-size: 17px;
+    }
+
+    .answer p,
+    .answer span {
+        font-size: 19px;
+        line-height: 32px;
+        letter-spacing: 2px
+    }
+}
+
+/*iphone X*/
+@media (min-height: 800px) and (orientation: portrait) {
+    .opins h3 {
+        font-size: 32px;
+    }
+
+    .opins h4 {
+        font-size: 21px;
+    }
+
+    textarea,
+    input[type=text],
+    select,
+    input[type=submit],
+    input[type=reset],
+    input[type=email],
+    input[type=tel],
+    input[type=datetime-local] {
+        font-size: 19px;
+    }
+
+    .answer p,
+    .answer span {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 2px
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    .opins h3 {
+        font-size: 47px;
+    }
+
+    .opins h4 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+    textarea,
+    input[type=text],
+    select,
+    input[type=submit],
+    input[type=reset],
+    input[type=email],
+    input[type=tel],
+    input[type=datetime-local] {
+        font-size: 24px;
+    }
+
+    .avatar {
+        width: auto;
+        height: 25vw;
+    }
+
+    .answer p,
+    .answer span {
+        font-size: 24px;
+        line-height: 39px;
+        letter-spacing: 2px
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    .opins h3 {
+        font-size: 51px;
+    }
+
+    .opins h4 {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    textarea,
+    input[type=text],
+    select,
+    input[type=submit],
+    input[type=reset],
+    input[type=email],
+    input[type=tel],
+    input[type=datetime-local] {
+        font-size: 32px;
+    }
+
+    .answer p,
+    .answer span {
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: 3px;
+    }
+}
+
+@media (orientation: landscape) {
+
+    input[type=text],
+    select,
+    input[type=submit],
+    input[type=reset],
+    input[type=email],
+    input[type=tel],
+    input[type=datetime-local] {
+        height: 8vh;
+    }
+
+    textarea {
+        height: 25vh;
+    }
+
+    .avatar {
+        width: auto;
+        height: 25vw;
+    }
+
+    .answer p,
+    .answer span {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+
+    .opins h4 {
+        font-size: 18px;
+    }
+
+    textarea,
+    input[type=text],
+    select,
+    input[type=submit],
+    input[type=reset],
+    input[type=email],
+    input[type=tel],
+    input[type=datetime-local] {
+        font-size: 16px;
+    }
+
+    .answer p,
+    .answer span {
+        font-size: 16px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 812px) {
+
+    .opins h3 {
+        font-size: 35px;
+    }
+
+    .opins h4 {
+        font-size: 24px;
+    }
+
+    .answer p,
+    .answer span {
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .opins h3 {
+        font-size: 58px;
+    }
+
+    .opins h4 {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    textarea,
+    input[type=text],
+    select,
+    input[type=submit],
+    input[type=reset],
+    input[type=email],
+    input[type=tel],
+    input[type=datetime-local] {
+        font-size: 30px;
+    }
+
+    .avatar {
+        height: 20vw;
+    }
+
+    .answer p,
+    .answer span {
+        font-size: 42px;
+        line-height: 52px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .opins h4 {
+        font-size: 46px;
+        line-height: 56px;
+    }
+
+    textarea,
+    input[type=text],
+    select,
+    input[type=submit],
+    input[type=reset],
+    input[type=email],
+    input[type=tel],
+    input[type=datetime-local] {
+        font-size: 36px;
+    }
+
+    .answer p,
+    .answer span {
+        line-height: 62px;
+    }
+}
+
+@media (min-width: 1680px) {
+
+    input[type=submit],
+    input[type=reset] {
+        width: 30%;
+    }
+
+    textarea {
+        max-width: 80%
+    }
+}
+
+/*zdjecie w tle pomiedzy sekcjami*/
+.pphh3 {
+    height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+    background-image: url(../img/ujecia/technology-2589463_1920.jpg);
+    background-repeat: no-repeat;
+    background-position: 10%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* sekcja(6): kontakt */
+.ctnt {
+    min-height: 100vh;
+    max-width: 1680px;
+    margin: 0 auto;
+    line-height: 28px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+.ctnt h3 {
+    padding: 10vh 4vh 4vh;
+    font-size: 24px;
+    text-decoration: overline;
+    text-transform: uppercase;
+}
+
+.ctnt h2 {
+    padding: 0 4vh 4vh;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.ctnt h1.merc {
+    display: block;
+    font-weight: 600;
+    text-decoration: underline;
+    padding: 0 4vh 2vh;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+.ctnt p {
+    padding: 0 4vh 2vh;
+    letter-spacing: 1px;
+    font-size: 15px;
+
+}
+
+p.mer {
+    margin-top: 7vh;
+    margin-bottom: 4vh;
+    letter-spacing: 5px;
+    border-bottom: 1px dashed rgba(0, 0, 0, .6);
+
+}
+
+.ctnt span {
+    font-weight: 600;
+}
+
+.social img {
+    max-width: 8vh;
+    float: left;
+    margin: 8vh 4vw 4vh 8vw;
+}
+
+.ctnt form {
+    padding-top: 9vh;
+}
+
+.meee {
+    margin-top: 2vh;
+}
+
+p.datetime {
+    font-size: 13px;
+}
+
+.lgh {
+    padding: 4vh 0;
+}
+
+.rkk {
+    text-align: right;
+    border-bottom: 1px dashed rgba(0, 0, 0, .6);
+    margin-bottom: 2vh;
+}
+
+footer {
+    max-width: 1680px;
+    margin: 0 auto 4vh;
+    padding: 3vh;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+footer p {
+    letter-spacing: 3px;
+    font-size: 14px;
+    line-height: 22px;
+    display: block;
+}
+
+.ja {
+    font-weight: 600;
+}
+
+
+@media (min-width: 360px) and (orientation: portrait) {
+    .ctnt h3 {
+        font-size: 26px;
+    }
+
+    .ctnt h2 {
+        font-size: 17px;
+    }
+
+    .ctnt h1.merc {
+        font-size: 19px;
+    }
+
+    .ctnt p {
+        font-size: 17px;
+    }
+
+
+    footer p {
+        font-size: 15px;
+        letter-spacing: 6px;
+        line-height: 24px;
+    }
+}
+
+@media (min-width: 411px) and (orientation: portrait) {
+    .ctnt h3 {
+        font-size: 31px;
+    }
+
+    .ctnt h2 {
+        font-size: 19px;
+        letter-spacing: 2px;
+    }
+
+    .ctnt h1.merc {
+        font-size: 22px;
+    }
+
+    .ctnt p {
+        font-size: 19px;
+    }
+
+
+    footer p {
+        font-size: 16px;
+
+        line-height: 24px;
+    }
+}
+
+/*iphone X*/
+@media (min-height: 800px) and (orientation: portrait) {
+    .ctnt h3 {
+        font-size: 32px;
+    }
+
+    .ctnt h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .ctnt h1.merc {
+        font-size: 21px;
+    }
+
+    .ctnt p {
+        font-size: 19px;
+    }
+
+    .ctnt form {
+        padding-top: 12vh;
+    }
+
+    footer p {
+        font-size: 16px;
+
+        line-height: 34px;
+    }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    .ctnt h3 {
+        font-size: 47px;
+    }
+
+    .ctnt h2 {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .ctnt h1.merc {
+        font-size: 28px;
+    }
+
+    .ctnt p {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .ctnt form {
+        padding-top: 8vh;
+    }
+
+    footer p {
+        font-size: 32px;
+        line-height: 46px;
+    }
+
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    .ctnt h3 {
+        font-size: 51px;
+    }
+
+    .ctnt h2 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+    .ctnt h1.merc {
+        font-size: 36px;
+    }
+
+    .ctnt p {
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    footer p {
+        font-size: 38px;
+    }
+}
+
+@media (orientation: landscape) {
+    .social img {
+        margin-top: 15vh;
+        margin-bottom: 8vh;
+        max-width: 8vw;
+        ;
+    }
+
+    .ctnt h3 {
+        font-size: 18px;
+    }
+
+    .ctnt h2 {
+        font-size: 14px;
+    }
+
+    .ctnt h1.merc {
+        font-size: 15px;
+    }
+
+    .ctnt p {
+        font-size: 16px;
+    }
+
+    .ctnt form {
+        padding-top: 12vh;
+    }
+
+    footer p {
+        font-size: 18px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .ctnt h3 {
+        font-size: 24px;
+    }
+
+    .ctnt h2 {
+        font-size: 18px;
+    }
+
+    .ctnt h1.merc {
+        font-size: 18px;
+    }
+
+    .ctnt p {
+        font-size: 19px;
+    }
+
+    footer p {
+        font-size: 17px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 812px) {
+    .ctnt h3 {
+        font-size: 32px;
+    }
+
+    .ctnt h2 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+
+    p.mer {
+        padding: 6vh;
+    }
+
+    .ctnt h1.merc {
+        font-size: 22px;
+    }
+
+    .ctnt p {
+        font-size: 22px;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .social img {
+        margin-top: 8vh;
+        margin-bottom: 5vh;
+    }
+
+    .ctnt h3 {
+        font-size: 58px;
+    }
+
+    .ctnt h2 {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    .ctnt h1.merc {
+        font-size: 42px;
+        line-height: 56px;
+        letter-spacing: 4px;
+    }
+
+    p.lgh1 {
+        padding-bottom: 7vh;
+    }
+
+    .ctnt p {
+        font-size: 42px;
+    }
+
+    footer p {
+        font-size: 42px;
+        line-height: 56px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .ctnt h3 {
+        font-size: 72px;
+    }
+
+    .ctnt h2 {
+        padding-top: 4vh;
+    }
+
+    .ctnt h1.merc {
+        font-size: 52px;
+
+        /*
+
+JESTEM PO PIERWSZYM ETAPIE KURSU PO UKONCZENIU KTOREGO 
+BEDE MÓGL PRACOWAC NA STANOWISKU #FRONT END DEVELOPER
+
+JEST TO MOJA PIERWSZA STRONA KTÓRĄ STWORZYŁEM W CELACH
+EDUKACYJNYCH ZA POMOCĄ: HTML + CSS (2585 + 331 linijek kodu)
+
+PO KAŻDYM ETAPIE KURSU PLANUJE TWORZYĆ NOWY PROJEKT
+
+CAŁY POWYŻSZY KOD NAPISAŁEM OD ZERA, 'Z PALCA'
+        
+POWSTAŁA STRONA INTERNETOWA JEST 
+W PEŁNI RESPONSYWNA, DOSTOSOWANA DO KAŻDEJ
+ROZDZIELCZOŚCI, OBSŁUGIWANIA ZARÓWNO PRZEZ 
+PC JAK I URZĄDZENIA MOBILNE 
+W TRYBIE PORTRAIT ORAZ LANDSCAPE
+
+STRONĘ ZAMIEŚCIŁEM NA DARMOWYM HOSTINGU, STĄD ADRES:
+http://drone4u.getenjoyment.net/
+
+*/
